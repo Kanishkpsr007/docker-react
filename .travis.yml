@@ -1,3 +1,5 @@
+language:generic
+
 sudo: required
 
 service:
@@ -9,4 +11,3 @@ before_install:
 script:
  - docker run -e CI=true kanishk:v3 npm run test 
 
-language:generic
