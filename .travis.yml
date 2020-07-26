@@ -1,0 +1,12 @@
+sudo: required
+
+service:
+ - docker
+
+before_install:
+ - docker build -f Dockerfile.dev . -t kanishk:v3
+
+script:
+ - docker run -e CI=true kanishk:v3 npm run test 
+
+language:generic
